@@ -30,8 +30,8 @@ except snowflake.connector.errors.ProgrammingError as e:
     streamlit.error(f"Snowflake error: {e}")
 
 # Close the cursor and connection in a finally block
-finally:
-    if my_cur:
-        my_cur.close()
-    if my_cnx:
-        my_cnx.close()
+# finally:
+#     if my_cur:
+#         my_cur.close()
+#     if my_cnx:
+#         my_cnx.close()
