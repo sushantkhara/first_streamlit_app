@@ -1,5 +1,6 @@
 import streamlit
 import snowflake.connector
+import streamlit.secrets
 
 # Load Snowflake secrets
 snowflake_secrets = streamlit.secrets["snowflake"]
