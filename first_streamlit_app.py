@@ -2,7 +2,13 @@ import streamlit
 import snowflake.connector
 
 # Check if running in Streamlit environment
-if streamlit._is_running_with_streamlit:
+try:
+    streamlit.secrets
+    is_streamlit = True
+except AttributeError:
+    is_streamlit = False
+
+if is_streamlit:
 
     # Load Snowflake secrets
     snowflake_secrets = streamlit.secrets["snowflake"]
